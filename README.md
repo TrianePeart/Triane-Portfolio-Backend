@@ -83,10 +83,6 @@ Then, follow the specifications above to create your application. Work with your
 
 Use the resources below to deploy your application.
 
-### Front-end Deployment
-
-1. [Netlify Deployment Instructions](https://github.com/9-1-pursuit/guide-deployment/tree/main/netlify-create-react-app)
-1. [Netlify Deployment Video](https://drive.google.com/file/d/1am3ljqxJTyvPQ5hzlsaU7o_bf6-lA4UK/view?usp=sharing)
 
 ### Back-end Deployment
 

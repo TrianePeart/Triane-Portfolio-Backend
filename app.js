@@ -1,7 +1,7 @@
 // DEPENDENCIES
 const express = require("express");
 const cors = require("cors");
-
+const postsController = require("./Controllers/postsController")
 
 // CONFIGURATION
 const app = express();
@@ -9,11 +9,11 @@ const app = express();
 // MIDDLEWARE
 app.use(express.json());
 app.use(cors()); 
-
+app.use("/posts", postsController);
 
 // ROUTES
 app.get("/", (req, res) => {
-    res.status(200).send("");
+    res.status(200).send("Welcome To Write Tingz");
 });
   
 app.get("/not-found", (req, res) => {

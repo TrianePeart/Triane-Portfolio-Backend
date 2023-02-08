@@ -2,8 +2,14 @@
 const express = require("express");
 const cors = require("cors");
 const postsController = require("./Controllers/postsController")
+//DEPENDENCIES
+
+const express = require('express');
+const cors = require('cors');
+const postsController = require('./Controllers/postsController');
 
 // CONFIGURATION
+
 const app = express();
 
 // MIDDLEWARE

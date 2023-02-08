@@ -20,7 +20,7 @@ CREATE DATABASE write_tingz;
 DROP TABLE IF EXISTS posts; 
 
 CREATE TABLE posts (
-   article_id SERIAL PRIMARY KEY, 
+   id SERIAL PRIMARY KEY, 
    title VARCHAR(200) NOT NULL, 
    author VARCHAR(60) NOT NULL,
    content TEXT NOT NULL, 

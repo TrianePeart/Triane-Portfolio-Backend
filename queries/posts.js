@@ -2,7 +2,8 @@ const db = require("../db/dbConfig.js");
 
 
 //INDEX
-const getAllPost = async () => {
+const getAllPost 
+= async () => {
   try {
    const allPost = await db.any("SELECT * FROM posts");
     return allPost;

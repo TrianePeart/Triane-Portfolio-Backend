@@ -13,7 +13,7 @@ const { validateRequest } = require('../validations/helpers')
 // INDEX
 posts.get("/", async (req, res) => {
   const allPost = await getAllPost();
-  if(allPost[0]) {
+  if(allPost) {
     res.status(200).json(allPost);
   } else {
     res.status(500).json({ error: "Problem With The Server" });
@@ -25,7 +25,7 @@ posts.get("/:id", async (req, res) => {
   const { id } = req.params;
   const  singlePost = await getAPost(id);
 
-  if(!singlePost.message) {
+  if(singlePost) {
     res.status(200).json(singlePost);
   } else {
     res.status(404).json({ error: "Page Not Found" });

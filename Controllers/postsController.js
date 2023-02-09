@@ -33,10 +33,9 @@ posts.get("/:id", async (req, res) => {
 });
 
 //CREATE
-posts.post("/", async (req, res) => {
+posts.post("/", validateRequest, async (req, res) => {
   try {
-    const valid = validateRequest(req.body)
-    const newPost = await createPosts(valid) ;
+    const newPost = await createPosts(req.body) ;
     res.status(200).json(newPost);
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" });

@@ -47,9 +47,9 @@ posts.put('/:id', async (req, res) => {
         const { id } = req.params;
         const updatePost = await updatePosts(id, req.body);
         if(updatePost){
-            res.status(200).json(update)
+            res.status(200).json(updatePost)
         } else{
-            res.status(404).json({ error: 'Posts Not Found'})
+          res.status(404).json({ error: 'Posts Not Found'})
     }
 })
 

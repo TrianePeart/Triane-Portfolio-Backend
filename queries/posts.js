@@ -46,8 +46,8 @@ const createPosts = async (post) => {
 //UPDATE
 const updatePosts = async (id, post) => {
   try {
-    const updatePosts = await db.one(
-      "UPDATE posts SET title=$1, author=$2, content=$3, post_type=$4, updated_at=$5, created_at=$6, is_liked=$7, is_bookmarked=$8 WHERE id=$9 id= RETURNING *",
+    const updatePost = await db.one(
+      "UPDATE posts SET title=$1, author=$2, content=$3, post_type=$4, updated_at=$5, created_at=$6, is_liked=$7, is_bookmarked=$8 WHERE id=$9 RETURNING *",
       [
         post.title, 
         post.author,
@@ -61,7 +61,7 @@ const updatePosts = async (id, post) => {
         //ID might need to be changed if validation is made
       ]
     );
-    return updatePosts;
+    return updatePost;
   } catch (error) {
     error;
   }

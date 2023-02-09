@@ -2,7 +2,7 @@ const db = require("../db/dbConfig.js");
 
 
 //INDEX
-const getAllPost= async () => {
+const getAllPost = async () => {
   try {
    const allPost = await db.any("SELECT * FROM posts");
     return allPost;
@@ -69,7 +69,7 @@ const updatePosts = async (id, post) => {
 //DELETE
 const deletePosts = async (id) => {
   try {
-    const deletePost = await db.one(
+    const deletePosts = await db.one(
       "DELETE FROM posts WHERE ID =$1 RETURNING *",
       id
     );

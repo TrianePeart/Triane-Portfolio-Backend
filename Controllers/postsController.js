@@ -13,7 +13,7 @@ const { validateRequest } = require('../validations/helpers')
 // INDEX
 posts.get("/", async (req, res) => {
   const allPost = await getAllPost();
-  if(allPost) {
+  if(allPost[0]) {
     res.status(200).json(allPost);
   } else {
     res.status(500).json({ error: "Problem With The Server" });

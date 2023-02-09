@@ -40,37 +40,29 @@ posts.post("/", validateRequest, async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" });
   }
-  //Giving different response so I know which error is effected 
 });
 
 //UPDATE
-posts.put('/:id', async(req,res)=>{
-    try {
-        const { id }=req.params;
-        const valid = validateRequest(req.body);
-        const update = await updatePosts(id, valid);
-        if(update.id){
+posts.put('/:id', async (req, res) => {
+        const { id } = req.params;
+        const updatePost = await updatePosts(id, req.body);
+        if(updatePost){
             res.status(200).json(update)
         } else{
             res.status(404).json({ error: 'Posts Not Found'})
-        }
-    } catch (error) {
-        res.status(404).json({error: "Post Not Found"})
     }
 })
+
+//CODE HITTING ERROR CHECK BACK IN MORNING
 
 // DELETE
 posts.delete("/:id", async (req, res) => {
     const { id } = req.params;
-    try {
-      const deleted = await deletePosts(id);
-      if (deleted.id) {
-        res.status(200).json(deleted);
-      } else {
+    const deleted = await deletePosts(id);
+    if (deleted.id) {
+      res.status(200).json(deleted);
+    } else {
         res.status(404).json({ error: "Post Not Found" });
-      }
-    } catch (error) {
-      return error;
     }
 });
 

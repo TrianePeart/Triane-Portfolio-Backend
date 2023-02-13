@@ -33,7 +33,8 @@ posts.get("/:id", async (req, res) => {
 });
 
 //CREATE
-posts.post("/", validateRequest, async (req, res) => {
+posts.post("/", async (req, res) => {
+  console.log('body', req.body)
   try {
     const newPost = await createPosts(req.body) ;
     res.status(200).json(newPost);

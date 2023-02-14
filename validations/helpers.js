@@ -20,4 +20,8 @@ const validateRequest = (req, res, next) => {
     next()
 }; 
 
-module.exports = { validateRequest }
+//GOOGLE
+const isLoggedIn = (req, res, next) => {
+    req.user ? next() : res.sendStatus(401);
+}
+module.exports = { validateRequest, isLoggedIn }

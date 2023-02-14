@@ -5,13 +5,11 @@ const validateRequest = (req, res, next) => {
         .status(422)
         .json({error: 'Title is required'})
     }
-
     if(typeof content !== 'string') {
         res
         .status(422)
         .json({error: 'Content section must be filled'})
     }
-
     if(typeof author !== 'string') {
         res
         .status(422)
@@ -20,8 +18,4 @@ const validateRequest = (req, res, next) => {
     next()
 }; 
 
-//GOOGLE
-const isLoggedIn = (req, res, next) => {
-    req.user ? next() : res.sendStatus(401);
-}
-module.exports = { validateRequest, isLoggedIn }
+module.exports = { validateRequest }

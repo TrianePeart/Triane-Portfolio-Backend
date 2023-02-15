@@ -1,5 +1,5 @@
 const db = require("../db/dbConfig.js");
-console.log(db.connect)
+
 
 
 //INDEX
@@ -26,7 +26,7 @@ const getAPost = async (id) => {
 //CREATE
 const createPosts = async (post) => {
   try {
-    console.log(post)
+
     const newPosts = await db.one(
       "INSERT INTO posts (title, author, content, post_type, is_liked, is_bookmarked) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
       [
@@ -38,7 +38,6 @@ const createPosts = async (post) => {
         post.is_bookmarked
       ]
     );
-    console.log('post', newPosts)
     return newPosts;
   } catch (error) {
     return error;

@@ -25,18 +25,15 @@ const getAPost = async (id) => {
 
 //CREATE
 const createPosts = async (post) => {
-  console.log('query')
   try {
-    console.log('Hello')
     console.log(post)
     const newPosts = await db.one(
-      "INSERT INTO posts (title, author, content, post_type, created_at, is_liked, is_bookmarked) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *",
+      "INSERT INTO posts (title, author, content, post_type, is_liked, is_bookmarked) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
       [
         post.title, 
         post.author,
         post.content, 
         post.post_type,
-        post.created_at,
         post.is_liked,
         post.is_bookmarked
       ]
@@ -52,14 +49,12 @@ const createPosts = async (post) => {
 const updatePosts = async (id, post) => {
   try {
     const updatePost = await db.one(
-      "UPDATE posts SET title=$1, author=$2, content=$3, post_type=$4, updated_at=$5, created_at=$6, is_liked=$7, is_bookmarked=$8 WHERE id=$9 RETURNING *",
+      "UPDATE posts SET title=$1, author=$2, content=$3, post_type=$4, is_liked=$5, is_bookmarked=$6 WHERE id=$7 RETURNING *",
       [
         post.title, 
         post.author,
         post.content, 
         post.post_type,
-        post.updated_at,
-        post.created_at,
         post.is_liked,
         post.is_bookmarked,
         id

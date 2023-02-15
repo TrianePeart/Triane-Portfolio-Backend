@@ -25,8 +25,6 @@ CREATE TABLE posts (
    author VARCHAR(60) NOT NULL,
    content TEXT NOT NULL, 
    post_type TEXT DEFAULT 'Select Post Type',
-   updated_at TIMESTAMP, 
-   created_at DATE,
    is_liked BOOL ,
    is_bookmarked BOOL
 );

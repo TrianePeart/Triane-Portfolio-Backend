@@ -1,11 +1,11 @@
 \c write_tingz;
 
-INSERT INTO posts (title, author, post_type, created_at, is_liked, is_bookmarked, content) VALUES
-('Thoughts That Haunt Me', 'Chaotic Gremlin', 'Random', '8-3-1998', false, false, 'Penguins don''t have knees! Yet they bend. THEY BEND!'),
-('The Death Of A Coder', 'Action Jackson', 'Article', '2-8-2023', false, false, 'Burnt out coder, Triane Peart was found in a zombie state this week. Their soul slowly slipping from the earthly plane with every word written in thier project. Triane unsubscribed from life after she had to type out a schema and seed for a writing app while MondoDB exsisted. Their mental assassins who will not be named still on the loose tonight. More information to come.'),
+INSERT INTO posts (title, author, post_type, is_liked, is_bookmarked, content) VALUES
+('Thoughts That Haunt Me', 'Chaotic Gremlin', 'Random', false, false, 'Penguins don''t have knees! Yet they bend. THEY BEND!'),
+('The Death Of A Coder', 'Action Jackson', 'Article', false, false, 'Burnt out coder, Triane Peart was found in a zombie state this week. Their soul slowly slipping from the earthly plane with every word written in thier project. Triane unsubscribed from life after she had to type out a schema and seed for a writing app while MondoDB exsisted. Their mental assassins who will not be named still on the loose tonight. More information to come.'),
 
 
-('3 ingredient Easy Sugar Cookies', 'Belly Full', 'Recipe', '11-19-2020', false, true, 
+('3 ingredient Easy Sugar Cookies', 'Belly Full', 'Recipe', false, true, 
 
 'Ingredients
 1 cup unsalted butter , room temperature
@@ -26,10 +26,10 @@ Enjoy!'),
 
 
 
-('Late Last Night', 'Langston Hughes', 'Poetry', '2-1-1944', true, true, 
+('Late Last Night', 'Langston Hughes', 'Poetry', true, true, 
 'Late Last Night I Set on my steps and cried. Wasn’t nobody gone, Neither had nobody died. I was cryin Cause you broke my heart in two. You looked at me cross-eyed And broke my heart in two –So I was crying On account of You.'),
 
-('Lamb to the Slaughter', 'Roald Dahl', 'Story', '9-4-1953', true, false, 'The room was warm and clean, the curtains drawn, the two table lamps alight-hers and the one by the empty chair opposite. On the sideboard behind her, two tall glasses, soda water, whiskey. Fresh ice cubes in the Thermos bucket.
+('Lamb to the Slaughter', 'Roald Dahl', 'Story', true, false, 'The room was warm and clean, the curtains drawn, the two table lamps alight-hers and the one by the empty chair opposite. On the sideboard behind her, two tall glasses, soda water, whiskey. Fresh ice cubes in the Thermos bucket.
 Mary Maloney was waiting for her husband to come home from work.
 Now and again she would glance up at the clock, but without anxiety, merely to please herself with the thought that each minute gone by made it nearer the time when he would come. There was a slow smiling air about her, and about everything she did. The drop of a head as she bent over her sewing was curiously tranquil. Her skin--for this was her sixth month with child--had acquired a wonderful translucent quality, the mouth was soft, and the eyes, with their new placid look, seemed larger darker than before. When the clock said ten minutes to five, she began to listen, and a few moments later, punctually as always, she heard the tires on the gravel outside, and the car door slamming, the footsteps passing the window, the key turning in the lock. She laid aside her sewing, stood up, and went forward to kiss him as he came in.
 "Hullo darling," she said.
